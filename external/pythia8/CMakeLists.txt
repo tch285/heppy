@@ -61,6 +61,7 @@ if (LHAPDF6_FOUND)
 	list(APPEND PYTHIA8_CONFIGURE_COMMAND --with-lhapdf6=${LHAPDF6_DIR})
 endif(LHAPDF6_FOUND)
 
+set(Python3_FIND_STRATEGY LOCATION)
 find_package(Python3 3.6 REQUIRED COMPONENTS Interpreter Development NumPy)
 if (Python3_FOUND)
 	list(APPEND PYTHIA8_CONFIGURE_COMMAND --with-python-include=${Python3_INCLUDE_DIRS})

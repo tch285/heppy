@@ -38,6 +38,7 @@ set (CMAKE_CXX_STANDARD 11)
 
 message( STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 
+set(Python3_FIND_STRATEGY LOCATION)
 find_package(Python3 3.6 REQUIRED COMPONENTS Interpreter Development NumPy)
 if (Python3_FOUND)
     message(STATUS "${Green}Python ver. ${Python3_VERSION} found.${ColourReset}")

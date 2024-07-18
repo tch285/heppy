@@ -1,3 +1,4 @@
+set(Python_FIND_STRATEGY LOCATION)
 find_package(Python 3.6 REQUIRED COMPONENTS Interpreter Development NumPy)
 if (Python_FOUND)
     message(STATUS "${Green}Python ver. ${Python_VERSION} found.${ColourReset}")

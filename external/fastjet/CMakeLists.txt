@@ -29,6 +29,7 @@ set (CMAKE_CXX_STANDARD 11)
 
 message( STATUS "CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
 
+set(Python3_FIND_STRATEGY LOCATION)
 find_package(Python3 3.6 REQUIRED COMPONENTS Interpreter Development NumPy)
 if (Python3_FOUND)
     message(STATUS "${Green}Python ver. ${Python3_VERSION} found.${ColourReset}")
@@ -53,8 +54,9 @@ endif(NOT FASTJET_HEPPY_PREFIX)
 
 message(STATUS "FASTJET_HEPPY_PREFIX ${FASTJET_HEPPY_PREFIX}")
 
-find_package(Python 3.6 REQUIRED COMPONENTS Interpreter Development NumPy)
+find_package(Python3 3.6 REQUIRED COMPONENTS Interpreter Development NumPy)
 set($ENV{PYTHON} ${Python3_EXECUTABLE})
+set(Python_VERSION ${Python3_VERSION})
 message(STATUS "Python version string is ${Python_VERSION}")
 string(REPLACE "." " " Python_VERSIONx "${Python_VERSION}")
 string(REGEX MATCHALL "[0-9]+" PYTHON_VER_MATCH "${Python_VERSIONx}")
