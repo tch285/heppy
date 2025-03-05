@@ -71,6 +71,7 @@ if [ -d ${dirsrc} ]; then
 			-DHEPMC3_BUILD_EXAMPLES=OFF \
 			-DHEPMC3_ENABLE_TEST=OFF \
 			-DHEPMC3_INSTALL_INTERFACES=ON \
+                        -DHEPMC3_CXX_STANDARD=17 \
 	      	-DCMAKE_MACOSX_RPATH=ON \
 	      	-DCMAKE_INSTALL_RPATH=${dirinst}/lib \
 	      	-DCMAKE_BUILD_WITH_INSTALL_NAME_DIR=ON \
